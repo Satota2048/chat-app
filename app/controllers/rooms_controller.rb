@@ -3,8 +3,10 @@ class RoomsController < ApplicationController
     @room = Room.new
   end
 
+  def index
+  end
+
   def create
-    # 何か問題あり↓roomsで対応中
     @room = Room.new(room_params)
     if @room.save
       redirect_to root_path
